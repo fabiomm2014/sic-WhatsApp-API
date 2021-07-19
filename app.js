@@ -9,7 +9,7 @@ const { phoneNumberFormatter } = require('./helpers/formatter');
 const fileUpload = require('express-fileupload');
 const axios = require('axios');
 const port = process.env.PORT || 8000;
-
+var sleep = require('system-sleep');
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
@@ -55,6 +55,10 @@ const client = new Client({
 client.on('message', msg => {
   if (msg.body == '!ping') {
     msg.reply('pong');
+  } else if (msg.body.includes('1',7)) {
+    
+    sleep(30*1000); // sleep for 30 seconds
+    msg.reply('1');
   } else if (msg.body == 'good morning') {
     msg.reply('selamat pagi');
   } else if (msg.body == '!groups') {
