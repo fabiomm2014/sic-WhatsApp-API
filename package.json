@@ -21,7 +21,9 @@
     "express-validator": "^6.9.2",
     "http": "0.0.1-security",
     "qrcode": "^1.4.4",
+    "save": "^2.4.0",
     "socket.io": "2.3.0",
+    "system-sleep": "^1.3.7",
     "whatsapp-web.js": "latest"
   },
   "engines": {
